@@ -13,7 +13,7 @@ export default function Footer() {
             >
 
       
-      <p className="text-center">Made with ♥ by Yash Raj Mani</p>
+      <p className="text-center">Made with ❤️ & React.js by Yash Raj Mani</p>
     </footer>
   );
 }

@@ -10,110 +10,90 @@ import React, { useState, useEffect } from "react";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+function App() {
+  let initTodo;
 
-function App () {
+  if (localStorage.getItem("todos") === null) {
+    initTodo = [];
+  } else {
+    initTodo = JSON.parse(localStorage.getItem("todos"));
+  }
 
+  const onDelete = (todo) => {
+    console.log("Deleting the Todo... : ", todo);
+    console.log(typeof todo);
+    setTodos(
+      todos.filter((e) => {
+        return e !== todo;
+      })
+    );
+    console.log("deleted", todo);
+  };
 
-
-
-
-
-
-    let initTodo;
-  
-    if (localStorage.getItem("todos") === null) {
-      initTodo = [];
+  const addtodo = (title, desc) => {
+    let sno;
+    if (todos.length === 0) {
+      sno = 0;
     } else {
-      initTodo = JSON.parse(localStorage.getItem("todos"));
+      sno = todos[todos.length - 1].sno + 1;
     }
-  
-    const onDelete = (todo) => {
-      console.log("Deleting the Todo... : ", todo);
-      console.log(typeof todo);
-      setTodos(
-        todos.filter((e) => {
-          return e !== todo;
-        })
-      );
-      console.log("deleted", todo);
+    const newTodo = {
+      sno: sno,
+      title: title,
+      desc: desc,
     };
-  
-    const addtodo = (title, desc) => {
-      let sno;
-      if (todos.length === 0) {
-        sno = 0;
-      } else {
-        sno = todos[todos.length - 1].sno + 1;
-      }
-      const newTodo = {
-        sno: sno,
-        title: title,
-        desc: desc,
-      };
-      console.log("Adding this TODO : ");
-  
-      setTodos([...todos, newTodo]);
-  
-      console.log(newTodo);
-    };
-  
-    const [todos, setTodos] = useState(initTodo);
-  
-    useEffect(() => {
-      localStorage.setItem("todos", JSON.stringify(todos));
-    }, [todos]);
-  
-  
+    console.log("Adding this TODO : ");
 
+    setTodos([...todos, newTodo]);
 
+    console.log(newTodo);
+  };
 
-	const myStyle={
-    
-		// backgroundImage: "url(/assets/bg.jpg)",
-    backgroundImage: "linear-gradient(to right,#000B39,#003070 ,#0055AC ,#0055AC,#003070 , #000B39)",
-	
-		fontSize:'20px',
-		backgroundSize: 'contain',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'repeat',
-    backgroundAttachment: 'fixed',
-    color: 'white',
+  const [todos, setTodos] = useState(initTodo);
 
-	};
-	return (
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
+  const myStyle = {
+    // backgroundImage: "url(/assets/bg.jpg)",
+    backgroundImage:
+      "linear-gradient(to right,#000B39,#003070 ,#0055AC ,#0055AC,#003070 , #000B39)",
+
+    fontSize: "20px",
+    backgroundSize: "contain",
+    backgroundPosition: "center",
+    backgroundRepeat: "repeat",
+    backgroundAttachment: "fixed",
+    color: "white",
+  };
+  return (
     <>
-    <div style={myStyle}>
-    <Router>
-   
-    <Header title="Todoly" search={false} />
-      <Routes>
-        <Route exact path="/" element={
-            <>
-              <Add addtodo={addtodo} />
-              <Todos todos={todos} onDelete={onDelete} />
-            </>
-          }
-        >
+      <div style={myStyle}>
+        <Router>
+          <Header title="Todoly" search={false} />
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={
+                <>
+                  <Add addtodo={addtodo} />
 
-        </Route>
+                  <Todos todos={todos} onDelete={onDelete} />
+                </>
+              }
+            ></Route>
 
-        <Route exact path="/about" element={<About/>}></Route>
-        <Route exact path="/contact" element={<Contact/>}></Route>
+            <Route exact path="/about" element={<About />}></Route>
+            <Route exact path="/contact" element={<Contact />}></Route>
+          </Routes>
 
-      </Routes>
-
-      <Footer />
-    </Router>
-    </div>
-  </>
-
-	);
-
-
+          <Footer />
+        </Router>
+      </div>
+    </>
+  );
 }
 
-
 export default App;
-
-

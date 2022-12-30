@@ -55,7 +55,8 @@ export const About = () => {
         screen and hitting the "Add" button. The user can also delete a todo by
         clicking on the trash icon next to it. Overall, the todo list app is a
         simple and intuitive tool that helps users stay organized and on top of
-        their tasks.
+        their tasks. 😉
+       <br/> 
        <br/> 
         The user interface is intuitive and easy to navigate, with
         clear and concise instructions and helpful graphics and icons. The app
@@ -69,13 +70,13 @@ export const About = () => {
         features and functionality. It is a user-friendly application that helps
         users accomplish their goals and TODOs in an efficient and enjoyable
         way. Overall, the project is a powerful and flexible tool that helps
-        users achieve their tasks and get things done.
+        users achieve their tasks and get things done. 🤗
       </p>
 
 
       <div style={todostyle}>
     <h5>Feel free to reach me out , Regards Yash Raj Mani</h5>
-    <button className="btn btn-info" onClick={visit}>Reach Out</button> 
+    <button className="btn btn-info" onClick={visit}>Reach Out 👨‍💻</button> 
     </div>
   
       <hr/>

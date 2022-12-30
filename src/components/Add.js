@@ -10,6 +10,15 @@ let child = {
   padding: "30px",
   border: "10px ",
 };
+let child2 = {
+  width: "50%",
+  float: "left",
+  padding: "30px",
+  paddingBottom:'30px',
+  marginBottom: "20px",
+  backgroundColor: "#466AD8",
+  borderRadius: '20px'
+};
 
 let time = {
   color: "yellow",
@@ -21,12 +30,12 @@ let date = {
 };
 
 
-let vertical= {
-  borderLeft: "6px solid black",
-  height: "300px",
-  position:"absolute",
-  left: "50%",
-}
+// let vertical= {
+//   borderLeft: "6px solid black",
+//   height: "300px",
+//   position:"absolute",
+//   left: "50%",
+// }
 
 export const Add = (props) => {
   const [title, setTitle] = useState("");
@@ -49,6 +58,7 @@ export const Add = (props) => {
   }, []);
 
   return (
+    <>
     <div className="float-container" style={cs}>
       <div className="float-child" style={child}>
         <h1 style={time}>
@@ -68,7 +78,7 @@ export const Add = (props) => {
         </h2>
 
         <br></br>
-        <h3 style={{color:"yellow"}}>Hey, What are your goals today?</h3>
+        <h3 style={{color:"yellow"}}>👋 Hey, What are your goals today?</h3>
 
 
 
@@ -77,11 +87,11 @@ export const Add = (props) => {
       </div>
 
 
-      <div class = "vertical" style={vertical}></div>
+      {/* <div className = "vertical" style={vertical}></div> */}
 
 
-      <div className="float-child" style={child}>
-        <h2 style={{ color: "yellow" }}>Add a Todo : </h2>
+      <div className="float-child" style={child2}>
+        <h2 style={{ color: "yellow" }}> 📝 Add a Todo : </h2>
 
         <form onSubmit={submit}>
           <div className="c-3">
@@ -110,10 +120,18 @@ export const Add = (props) => {
           </div>
 
           <button type="submit" className="btn btn-primary">
-            ADD
+            ADD ✔️
           </button>
         </form>
+   
       </div>
+
     </div>
+
+
+
+
+</>
+
   );
 };

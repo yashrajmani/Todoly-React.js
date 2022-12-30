@@ -5,10 +5,13 @@ import TodoItem from "./TodoItem";
 let stylebody = {
   minHeight: "80vh",
   color:"white",
+  //padding: "20px",
 };
 let stylehead = {
   color:"yellow",
   fontSize:"35px",
+  padding: "5px",
+
 };
 let itemstyle = {
 
@@ -22,8 +25,13 @@ let itemstyle = {
 export default function Todos(props) {
   return (
 
+    <>
+
+   
     <div className="container my-5" style={stylebody}>
-      <h3 className="text-center my-2" style={stylehead}>TODOs:
+
+<br/>
+      <h3 className="text-center my-2" style={stylehead}> 📋 TODOs:
       <hr/>
       </h3>
    
@@ -37,7 +45,7 @@ export default function Todos(props) {
               width="200"
               height="200"
             /> */}
-            <h4 > Wohoo :) No More Todos !</h4>
+            <h4 > Wohoo 🤩 No More Todos !</h4>
           </div>
         </>
       ) : (
@@ -49,5 +57,8 @@ export default function Todos(props) {
         })
       )}
     </div>
+
+    
+    </>
   );
 }
