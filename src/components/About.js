@@ -1,5 +1,17 @@
 import React from "react";
 
+
+
+
+
+let todostyle = {
+  color:"white",
+  background:"linear-gradient(to top ,#5D5D5D,#131313 , #0a0707)",
+  borderRadius: '10px',
+  padding: "10px",
+  margin: "20px",
+};
+
 let stylebody = {
   color: "white",
   padding: "30px",
@@ -19,6 +31,14 @@ let stylehead = {
 };
 
 export const About = () => {
+
+
+
+  const visit=()=>{
+    const url = 'https://linktr.ee/yashrajmani';
+    window.open(url, '_blank');
+  };
+
   return (
     <>
       <div style={stylehead}>About</div>
@@ -51,6 +71,13 @@ export const About = () => {
         way. Overall, the project is a powerful and flexible tool that helps
         users achieve their tasks and get things done.
       </p>
+
+
+      <div style={todostyle}>
+    <h5>Feel free to reach me out , Regards Yash Raj Mani</h5>
+    <button className="btn btn-info" onClick={visit}>Reach Out</button> 
+    </div>
+  
       <hr/>
     </>
   );

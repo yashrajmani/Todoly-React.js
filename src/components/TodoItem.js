@@ -15,7 +15,7 @@ export default function TodoItem({todo,onDelete}) {
     <div style={todostyle}>
     <h5> {todo.sno+1} : {todo.title}</h5>
     <p> Description: {todo.desc}</p>
-    <button className="btn btn-sm btn-danger" onClick={()=>{onDelete(todo)}}>Delete</button> 
+    <button className="btn btn-sm btn-danger" onClick={()=>{onDelete(todo)}}>Remove</button> 
     </div>
     <hr/>
     </>

@@ -32,7 +32,7 @@ export const Contact = () => {
 
 
   const visit=()=>{
-    const url = 'somesite.com?data=yourDataToSend';
+    const url = 'https://github.com/yashrajmani/Todoly-React.js';
     window.open(url, '_blank');
   };
 
