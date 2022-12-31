@@ -10,9 +10,16 @@
 
 <img src="https://github.com/yashrajmani/Todoly-React.js/blob/master/public/assets/TODOLY.png" align="right" height="150" width="300"/>
 
-<a href="https://drive.google.com/file/d/19gPzf_0mJBgdFwGYSLPRfKrFKfYPNnpl/view?usp=share_link"><img src="https://playerzon.com/asset/download.png" width="200"></img></a><a href="https://drive.google.com/file/d/1IqkqPW91xt3pFBKxDRPVL42791KB9B74"><img src="https://cdn2.iconfinder.com/data/icons/miscellaneous-6-solid/128/demo_exhibition_demonstration-512.png"  height="60" width="60"></img></a><a href="https://docs.google.com/presentation/d/1S_1hRdn_vklcMeCXum5dSIJSYHzAdbI2"><img src="https://www.freeiconspng.com/thumbs/pdf-icon-png/pdf-icon-10.png"  height="60" width="60"></img></a>
+<a href="https://drive.google.com/file/d/1Xa6LWR6i6-WRKpC2fHT-i2L8NS0Ylo29/view?usp=share_link"><img src="https://t3.ftcdn.net/jpg/05/22/76/66/360_F_522766640_rTRDrVLnzTWvZyr3f2cpGSaKlnUlCA9H.jpg" width="250"></img></a>
  
-### Download ZIP from Gdrive by clicking here : [ZIP](https://drive.google.com/file/d/1Xa6LWR6i6-WRKpC2fHT-i2L8NS0Ylo29/view?usp=share_link)
+ 
+## Installation:
+
+#### Download ZIP from Gdrive by clicking here and extract files. : [ZIP](https://drive.google.com/file/d/1Xa6LWR6i6-WRKpC2fHT-i2L8NS0Ylo29/view?usp=share_link)
+
+#### Turn on Developer Mode in Browser in Extensions settings.
+
+#### Click on 'Load Unpacked' and Select the Todoly-build folder. The Extension will be now loaded.
 
 ## Tech & Tools:
 - React.js
