@@ -4,7 +4,6 @@ import Footer from "./components/Footer";
 import Todos from "./components/Todos";
 import { Add } from "./components/Add";
 import { About } from "./components/About";
-import { Contact } from "./components/Contact";
 
 import React, { useState, useEffect } from "react";
 
@@ -72,21 +71,13 @@ function App() {
       <div style={myStyle}>
         <Router>
           <Header title="Todoly" search={false} />
+
+          <Add addtodo={addtodo} />
+
+          <Todos todos={todos} onDelete={onDelete} />
+
           <Routes>
-            <Route
-              exact
-              path="/"
-              element={
-                <>
-                  <Add addtodo={addtodo} />
-
-                  <Todos todos={todos} onDelete={onDelete} />
-                </>
-              }
-            ></Route>
-
             <Route exact path="/about" element={<About />}></Route>
-            <Route exact path="/contact" element={<Contact />}></Route>
           </Routes>
 
           <Footer />

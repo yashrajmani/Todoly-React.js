@@ -1,23 +1,21 @@
-
 {
-	"manifest_version": 3,
-	"name": "Todoly",
-	"author": "Yash Raj Mani",
-	"version": "1.0.1",
-	"description": "Replace new tab screen with Todo List",
-	"action": {
-	  "default_popup": "index.html",
-	  "default_title": "Todoly"
-	},
+  "manifest_version": 3,
+  "name": "Todoly",
+  "author": "Yash Raj Mani",
+  "version": "1.0.1",
+  "description": "Replace new tab screen with Todo List",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Todoly",
+	"default_icon": "assets/logo.png"
+  },
 
-	"chrome_url_overrides": {
-		"newtab": "index.html"
-	},
-	"permissions": ["scripting"],
-	"host_permissions": [
-		"http://*/",
-		"https://*/"
-	  ]
+  "icons": {
+    "128": "assets/logo.png"
+  },
 
-  }
-
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": ["scripting"]
+}
